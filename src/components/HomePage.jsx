@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logotrp.png'; // Path to your Career Conquest logo
+import logo from '../assets/logotrp 2.png'; // Path to your Career Conquest logo
 import success from '../assets/Success.svg'
 import objectives from '../assets/Objectives.svg'
 import trainer from "../assets/Corporate-Trainer.svg";
@@ -7,20 +7,20 @@ const Home = () => {
   return (
     <div className="bg-white min-h-screen">
       <header className="flex justify-between items-center p-6">
-        <img src={logo} alt="Career Conquest Logo" className="" />
-        <nav>
-          <ul className="flex space-x-6 text-black">
-            <li>Product</li>
-            <li>Pricing</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
-        <div>
-          <button className="bg-black text-white py-2 px-4 rounded">Sign</button>
-        </div>
+        <img src={logo} alt="Career Conquest Logo" className="h-7" />
+        <div className="flex justify-end items-center">
+      <nav className="flex space-x-6 text-black">
+        <ul className='flex space-x-6 pr-10'>
+          <li>Product</li>
+          <li>Pricing</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <button className="bg-black text-white py-2 px-4 rounded">Login</button>
+    </div>
       </header>
 
-      <section className="container mx-auto flex flex-col lg:flex-row justify-between items-center py-16">
+      <section className="container mx-auto flex flex-col lg:flex-row justify-between items-center py-16 pt-7 pb-4 pl-52">
         <div className="w-full lg:w-1/2">
           <h1 className="text-5xl font-bold text-black mb-4">
             Empowering Careers with Personalized Job and Skill Matching
