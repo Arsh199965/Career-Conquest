@@ -14,7 +14,7 @@ const Home = () => {
           </ul>
         </nav>
         <div>
-          <button className="bg-black text-white py-2 px-4 rounded">Login</button>
+          <button className="bg-black text-white py-2 px-4 rounded">Sign</button>
         </div>
       </header>
 
