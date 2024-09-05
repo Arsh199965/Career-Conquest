@@ -1,11 +1,13 @@
 import React from 'react';
 import logo from '../assets/logotrp.png'; // Path to your Career Conquest logo
-
+import success from '../assets/Success.svg'
+import objectives from '../assets/Objectives.svg'
+import trainer from "../assets/Corporate-Trainer.svg";
 const Home = () => {
   return (
     <div className="bg-white min-h-screen">
       <header className="flex justify-between items-center p-6">
-        <img src={logo} alt="Career Conquest Logo" className="w-64" />
+        <img src={logo} alt="Career Conquest Logo" className="" />
         <nav>
           <ul className="flex space-x-6 text-black">
             <li>Product</li>
@@ -30,12 +32,24 @@ const Home = () => {
             Get Started
           </button>
         </div>
-        <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
+        <div className="w-full lg:w-1/2 mt-8 lg:mt-0 flex">
           <img
-            src="https://your-illustration-link.com/image.png"
-            alt="Career Growth Illustration"
-            className="w-full"
+            src={objectives}
+            className="w-1/3"
+
           />
+          <img
+            src={trainer}
+            className="w-1/3"
+
+          />
+          <img
+            src={success}
+            alt="Career Growth Illustration"
+            className="w-1/3"
+          />
+
+
         </div>
       </section>
 
