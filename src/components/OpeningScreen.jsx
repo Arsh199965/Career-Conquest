@@ -1,14 +1,14 @@
 import React from 'react';
-import Logo from '../assets/logo.png'; // Use the correct path to your logo
+import Logo from '../assets/logotrp.png'; // Use the correct path to your logo
 
 const OpeningScreen = ({ onStart }) => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-black">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-white">
       {/* Logo */}
       <img
         src={Logo}
         alt="Career Conquest"
-        className="w-2/3 max-w-xs animate-fadeIn" // Fade-in animation for logo
+        className=" animate-fadeIn" // Fade-in animation for logo
       />
       {/* Get Started Button */}
       <button
