@@ -3,7 +3,15 @@ import logo from "../assets/logotrp 2.png"; // Path to your Career Conquest logo
 import success from "../assets/Success.svg";
 import objectives from "../assets/Objectives.svg";
 import trainer from "../assets/Corporate-Trainer.svg";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
+
+  let handleClick = () => {
+    console.log("helo");
+    
+    navigate('/dashboard');
+  };
   return (
     <div className="bg-white min-h-screen">
       <header className="flex justify-between items-center p-6">
@@ -16,7 +24,7 @@ const Home = () => {
               <li className="border-2 border-black px-2">Contact</li>
             </ul>
           </nav>
-          <button className="bg-black text-white py-2 px-4 rounded">
+          <button onClick={() => { handleClick() }} className="bg-black text-white py-2 px-4 rounded" >
             Login
           </button>
         </div>

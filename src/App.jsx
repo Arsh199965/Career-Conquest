@@ -1,25 +1,17 @@
-import React, { useState } from 'react';
-import OpeningScreen from './components/OpeningScreen';
-import HomePage from './components/HomePage';
-import './App.css'; // Custom CSS for animations
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LoginPage from './components/LoginPage';
+import DashboardPage from './components/DashboardPage';
+import Home from "./components/HomePage";
 
 function App() {
-  const [hasStarted, setHasStarted] = useState(false);
-
-  const handleStart = () => {
-    setHasStarted(true);
-  };
-
   return (
-    <div className="App">
-      {!hasStarted ? (
-        <OpeningScreen onStart={handleStart} />
-      ) : (
-        <div className="fade-in">
-          <HomePage />
-        </div>
-      )}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+      </Routes>
+    </Router>
   );
 }
 
