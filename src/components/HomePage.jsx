@@ -3,10 +3,6 @@ import logo from "../assets/logotrp 2.png"; // Path to your Career Conquest logo
 import success from "../assets/Success.svg";
 import objectives from "../assets/Objectives.svg";
 import trainer from "../assets/Corporate-Trainer.svg";
-import test from "../assets/test2.svg";
-import analyse from "../assets/analysis.svg";
-import learn from "../assets/learn.svg";
-import successjob from "../assets/successjob.svg";
 import { useNavigate } from "react-router-dom";
 import Testimonial from "./Testimonial";
 import AnimatedSection from "./PathSection";
