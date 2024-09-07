@@ -61,15 +61,47 @@ const CoursesPage = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen flex justify-center items-center p-8">
-      <div className="p-4">
-        {/* Current Courses Section */}
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold mb-4">Current Courses</h2>
-          <Slider {...sliderSettings}>
-            {coursesData.map((course, index) => (
-              <div key={index} className="p-2">
-                <div className="bg-white shadow-lg rounded-lg p-4">
+    <div className="min-h-screen flex flex-col bg-white">
+      {/* Header */}
+      <header className="pt-10 w-full h-32 items-center">
+        <h1 className="text-4xl tracking-[0.2em] font-bold text-center">
+          Dashboard
+        </h1>
+      </header>
+
+      <div className="flex flex-grow">
+        {/* Sidebar */}
+        <Sidebar />
+
+        <div className="p-4">
+          <section className="mb-10">
+            <h2 className="text-2xl font-bold mb-4">Current Courses</h2>
+            <Slider {...sliderSettings}>
+              {coursesData.map((course, index) => (
+                <div key={index} className="p-2">
+                  <div className="bg-white shadow-lg rounded-lg p-4">
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className="rounded-lg mb-4"
+                    />
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">
+                        {course.title}
+                      </h3>
+                      <p className="text-gray-500">{course.progress}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Recommended Courses</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {recommendedCoursesData.map((course, index) => (
+                <div key={index} className="bg-white shadow-lg rounded-lg p-4">
                   <img
                     src={course.image}
                     alt={course.title}
@@ -82,30 +114,10 @@ const CoursesPage = () => {
                     <p className="text-gray-500">{course.progress}</p>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Slider>
-        </section>
-
-        {/* Recommended Courses Section */}
-        <section>
-          <h2 className="text-2xl font-bold mb-4">Recommended Courses</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {recommendedCoursesData.map((course, index) => (
-              <div key={index} className="bg-white shadow-lg rounded-lg p-4">
-                <img
-                  src={course.image}
-                  alt={course.title}
-                  className="rounded-lg mb-4"
-                />
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">{course.title}</h3>
-                  <p className="text-gray-500">{course.progress}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   );
