@@ -7,14 +7,20 @@ import { useNavigate } from "react-router-dom";
 import Testimonial from "./Testimonial";
 import AnimatedSection from "./PathSection";
 import WhyCC from "./WhyCC";
+import Footer from "./Footer";
 
 const Home = () => {
   const navigate = useNavigate();
 
-  let handleClick = () => {
+  let handleLogin = () => {
     console.log("helo");
 
     navigate("/dashboard");
+  };
+  let handleSignup = () => {
+    console.log("helo");
+
+    navigate("/signup");
   };
   return (
     <div className="bg-white min-h-screen">
@@ -30,7 +36,7 @@ const Home = () => {
           </nav>
           <button
             onClick={() => {
-              handleClick();
+              handleLogin();
             }}
             className="bg-black text-white py-2 px-4 rounded"
           >
@@ -49,7 +55,7 @@ const Home = () => {
             Career.
           </p>
           <div className="flex gap-5 mt-8">
-            <button className="bg-black text-white py-2 px-4 rounded">
+            <button onClick={handleSignup} className="bg-black text-white py-2 px-4 rounded">
               Start As Candidate
             </button>
             <button className="bg-black text-white py-2 px-4 rounded">
@@ -68,11 +74,7 @@ const Home = () => {
       
       <AnimatedSection/>
       <WhyCC/>
-      <footer className="text-center py-8">
-        <p className="text-gray-600">
-          © 2024 Career Conquest. All rights reserved.
-        </p>
-      </footer>
+      <Footer/>
     </div>
   );
 };

@@ -4,48 +4,51 @@ const DashboardPage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Header */}
-      <header className="p-6 w-full h-32 items-center">
-        <h1 className="text-4xl tracking-[0.3em] font-bold text-center">
+      <header className="pt-10 w-full h-32 items-center">
+        <h1 className="text-4xl tracking-[0.2em] font-bold text-center">
           Dashboard
         </h1>
       </header>
 
       <div className="flex flex-grow">
         {/* Sidebar */}
-        <aside className="w-52 bg-gray-100 shadow-md h-auto p-6">
-          <ul className="space-y-4">
-            <li className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Home
-            </li>
-            <li className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
+        <aside className="w-52 bg-gray-100 shadow-xl shadow-gray-300 border h-auto p-6">
+          <ul className="space-y-6">
+            <li><a href="/dashboard" className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
+              Dashboard
+            </a></li>
+            <li><a href="/profile" className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
               Profile
-            </li>
-            <li className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
+            </a></li>
+            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
               Community
-            </li>
-            <li className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
+            </a></li>
+            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
               Courses
-            </li>
-            <li className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
+            </a></li>
+            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
+              Tests
+            </a></li>
+            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
               Interviews
-            </li>
-            <li className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
+            </a></li>
+            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
               Settings
-            </li>
-            <li className="hover:bg-gray-200 p-2 rounded-md cursor-pointer text-red-500">
+            </a></li>
+            <li><a href="/" className="hover:bg-gray-200 p-2 rounded-md cursor-pointer text-red-500">
               Log Out
-            </li>
+            </a></li>
           </ul>
         </aside>
 
         {/* Main Content */}
-        <div className="border-2 border-black flex-auto mx-24 p-4">
+        <div className="border-2 border-gray-800 flex-auto mx-24 shadow-2xl shadow-gray-400 p-4">
           {/* Job Matches */}
           <h2 className="text-xl font-semibold mb-4 px-4">Job Matches</h2>
           <div className=" mb-8 border-2 border-gray-300 mx-4">
             <table className="min-w-full bg-white border-collapse">
               <thead>
-                <tr className="bg-gray-200">
+                <tr className="bg-custom-red">
                   <th className="border py-2 px-40 text-center">Company</th>
                   <th className="border py-2 px-4 text-center">Role</th>
                   <th className="border py-2 px-4  text-center">CTC</th>
@@ -88,25 +91,25 @@ const DashboardPage = () => {
                   <div className="px-16 py-8 border-b-2 border-gray-300 hover:bg-gray-200">
                     <h3 className="font-semibold">Advance Web Development</h3>
                     <div className="bg-gray-300 h-2 w-full mt-1">
-                      <div className="bg-gray-600 h-2 w-3/4"></div>
+                      <div className="bg-custom-red h-2 w-3/4"></div>
                     </div>
                   </div>
                   <div className="px-16 py-8 border-b-2 border-gray-300 hover:bg-gray-200">
                     <h3 className="font-semibold">Basics of Business</h3>
                     <div className="bg-gray-300 h-2 w-full mt-1">
-                      <div className="bg-gray-600 h-2 w-1/2"></div>
+                      <div className="bg-custom-red h-2 w-1/2"></div>
                     </div>
                   </div>
                   <div className="px-16 py-8 border-b-2 border-gray-300 hover:bg-gray-200">
                     <h3 className="font-semibold">Intermediate UI Designing</h3>
                     <div className="bg-gray-300 h-2 w-full mt-1">
-                      <div className="bg-gray-600 h-2 w-1/3"></div>
+                      <div className="bg-custom-red h-2 w-1/3"></div>
                     </div>
                   </div>
                   <div className="px-16 py-8 border-b-2 border-gray-300 hover:bg-gray-200">
                     <h3 className="font-semibold">Fluent Business French</h3>
                     <div className="bg-gray-300 h-2 w-full mt-1">
-                      <div className="bg-gray-600 h-2 w-2/3"></div>
+                      <div className="bg-custom-red h-2 w-2/3"></div>
                     </div>
                   </div>
                 </div>
@@ -121,7 +124,7 @@ const DashboardPage = () => {
                 <div className="bg-white border-2 border-gray-300 border-collapse">
                   <table className="min-w-full border-collapse">
                     <thead>
-                      <tr className="bg-gray-200">
+                      <tr className="bg-custom-red">
                         <th className="border py-2 px-4">Company</th>
                         <th className="border py-2 px-4">Location</th>
                         <th className="border py-2 px-4">Date/Time</th>
