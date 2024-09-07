@@ -32,8 +32,8 @@ const TestPage = () => {
       question: "What service does Career Conquest provide for job seekers?",
       options: [
         "Guided job applications",
-        "Mock interviews",
-        "Resume reviews",
+        "Project Tracking",
+        "Analysis of Skill Gaps",
         "All of the above",
       ],
       correct: "All of the above",
@@ -41,12 +41,12 @@ const TestPage = () => {
     {
       question: "How can Career Conquest help in interviews?",
       options: [
-        "Provides interview coaching",
+        "Provides interview cracking courses",
         "Shares common questions",
         "Offers interview practice",
         "All of the above",
       ],
-      correct: "All of the above",
+      correct: "Provides interview cracking courses",
     },
     {
       question: "What kind of companies are featured in Career Conquest's job matches?",
@@ -58,7 +58,7 @@ const TestPage = () => {
       options: [
         "Technical skills",
         "Soft skills",
-        "Leadership",
+        "Projects",
         "All of the above",
       ],
       correct: "All of the above",
@@ -88,6 +88,9 @@ const TestPage = () => {
         <h1 className="text-4xl tracking-[0.1em] font-bold text-center">
           Assessments
         </h1>
+        <h2 className="text-2xl text-center mt-4 text-gray-600">
+          Assessing Your Knowledge About World's No. 1 Site
+        </h2>
       </header>
 
       <div className="flex flex-grow">
