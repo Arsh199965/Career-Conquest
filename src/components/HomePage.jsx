@@ -6,6 +6,7 @@ import trainer from "../assets/Corporate-Trainer.svg";
 import { useNavigate } from "react-router-dom";
 import Testimonial from "./Testimonial";
 import AnimatedSection from "./PathSection";
+import WhyCC from "./WhyCC";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -62,11 +63,11 @@ const Home = () => {
           <img src={success} className="w-1/3" />
         </div>
       </section>
-      <Testimonial content="We are the match-makers, so you don't have to worry about getting discovered." sayerName="Team CareerConquest" />
+      <Testimonial content="We are the match-makers, so you don't have to worry about getting discovered." sayerName="Team Career Conquest" />
 
-      {/* New section */}
+      
       <AnimatedSection/>
-
+      <WhyCC/>
       <footer className="text-center py-8">
         <p className="text-gray-600">
           © 2024 Career Conquest. All rights reserved.

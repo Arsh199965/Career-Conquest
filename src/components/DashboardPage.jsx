@@ -6,7 +6,7 @@ const DashboardPage = () => {
       {/* Header */}
       <header className="p-6 w-full h-32 items-center">
         <h1 className="text-4xl tracking-[0.3em] font-bold text-center">
-          CAREER CONQUEST
+          Dashboard
         </h1>
       </header>
 

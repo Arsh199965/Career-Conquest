@@ -8,7 +8,7 @@ import successjob from '../assets/Successjob.svg';
 const AnimatedSection = () => {
   const sectionRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
-  const count = useRef(1); // Use ref to persist count across renders
+  const count = useRef(1); 
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -17,7 +17,7 @@ const AnimatedSection = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasAnimated) {
-            // Logic to alternate animations based on count
+            
             if (count.current % 2 === 0) {
               entry.target.classList.remove('animate-slide-in');
             } else {
@@ -25,14 +25,14 @@ const AnimatedSection = () => {
               console.log("Animation added");
             }
             count.current += 1;
-            setHasAnimated(true); // Mark as animated
+            setHasAnimated(true); 
           } else if (!entry.isIntersecting) {
-            setHasAnimated(false); // Reset when out of view
+            setHasAnimated(false); 
             console.log("Out of view, animation reset");
           }
         });
       },
-      { threshold: 1.0 } // Trigger when 50% of the section is visible
+      { threshold: 1.0 }
     );
 
     if (section) {
