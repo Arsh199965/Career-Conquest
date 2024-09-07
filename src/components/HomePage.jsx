@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <div className="bg-white min-h-screen">
       <header className="flex justify-between items-center p-6">
-        <img src={logo} alt="Career Conquest Logo" className="h-7" />
+        <img src={logo} alt="Career Conquest Logo" className="h-12" />
         <div className="flex justify-end items-center">
           <nav className="flex space-x-6 text-black">
             <ul className="flex space-x-6 pr-10">
