@@ -84,8 +84,8 @@ const CoursesPage = () => {
     <div className="min-h-screen flex flex-col bg-white">
       {/* Header */}
       <header className="pt-10 w-full h-32 items-center">
-        <h1 className="text-4xl tracking-[0.2em] font-bold text-center">
-          Dashboard
+        <h1 className="text-4xl tracking-[0.1em] font-bold text-center">
+          Courses
         </h1>
       </header>
 

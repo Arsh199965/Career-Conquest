@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Sidebar from "./Sidebar";
 
 const AssessmentSelectionPage = () => {
@@ -29,37 +29,36 @@ const AssessmentSelectionPage = () => {
         {/* Main Content */}
         <div className="flex-auto mx-24 p-4">
           {/* Unassessed Skills */}
-          <div className="mb-8 p-6 bg-white border-2 border-gray-300 shadow-xl">
+          <div className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Unassessed Skills</h2>
-            <ul className="space-y-4">
+            <div className="grid grid-cols-3 gap-6">
               {unassessedSkills.map((skill, index) => (
-                <li
+                <div
                   key={index}
-                  className="p-4 border-2 border-gray-300 rounded-lg hover:bg-gray-200 cursor-pointer"
+                  className="p-6 bg-white border-2 border-gray-300 rounded-lg shadow-lg hover:bg-gray-100 cursor-pointer"
                   onClick={() => (window.location.href = "/quiz")}
                 >
-                  {skill}
-                </li>
+                  <h3 className="text-xl font-bold mb-2">{skill}</h3>
+                  <p className="text-gray-600">Start Assessment</p>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Assessed Skills */}
-          <div className="mb-8 p-6 bg-white border-2 border-gray-300 shadow-xl">
+          <div className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Assessed Skills</h2>
-            <ul className="space-y-4">
+            <div className="grid grid-cols-3 gap-6">
               {assessedSkills.map((skill, index) => (
-                <li
+                <div
                   key={index}
-                  className="p-4 border-2 border-gray-300 rounded-lg bg-gray-100"
+                  className="p-6 bg-gray-100 border-2 border-gray-300 rounded-lg shadow-lg"
                 >
-                  <div className="flex justify-between">
-                    <span>{skill.skill}</span>
-                    <span>{skill.score}%</span>
-                  </div>
-                </li>
+                  <h3 className="text-xl font-bold mb-2">{skill.skill}</h3>
+                  <p className="text-gray-600">Score: {skill.score}%</p>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>

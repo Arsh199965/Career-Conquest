@@ -5,7 +5,7 @@ const navLinks = [
   { name: "Profile", link: "/profile" },
   { name: "Community", link: "/community" },
   { name: "Courses", link: "/courses" },
-  { name: "Assessments", link: "/tests" },
+  { name: "Assessments", link: "/assessments" },
   { name: "Interviews", link: "/interviews" },
   { name: "Settings", link: "/settings" },
   { name: "Logout", link: "/" },
