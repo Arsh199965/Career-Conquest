@@ -99,24 +99,24 @@ const CoursesPage = () => {
             <h2 className="text-2xl font-bold mb-4">Current Courses</h2>
             <Slider {...sliderSettings}>
               {coursesData.map((course, index) => (
-                <div key={index} className="p-2">
-                  <div className="bg-white shadow-lg rounded-lg p-4">
-                    <div className="aspect-w-16 aspect-h-9">
-                      <iframe
-                        src={course.videoUrl}
-                        title={course.title}
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="w-full h-full rounded-lg"
-                      ></iframe>
-                    </div>
-                    <div className="mt-4">
-                      <h3 className="text-lg font-semibold mb-2">
-                        {course.title}
-                      </h3>
-                      <p className="text-gray-500">{course.progress}</p>
-                    </div>
+                <div
+                  key={index}
+                  className="bg-white w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] xl:w-[calc(25%-1.5rem)] shadow-lg rounded-lg p-4 transition-transform transform hover:scale-105"
+                >
+                  <div className="relative h-80">
+                    <iframe
+                      src={course.videoUrl}
+                      title={course.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full rounded-lg"
+                    ></iframe>
+                  </div>
+                  <div className="mt-4">
+                    <h3 className="text-lg font-semibold mb-2">
+                      {course.title}
+                    </h3>
+                    <p className="text-gray-500">{course.progress}</p>
                   </div>
                 </div>
               ))}
