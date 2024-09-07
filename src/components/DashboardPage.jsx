@@ -13,7 +13,7 @@ const DashboardPage = () => {
 
       <div className="flex flex-grow">
         {/* Sidebar */}
-        <Sidebar/>
+        <Sidebar />
 
         {/* Main Content */}
         <div className="border-2 border-gray-800 flex-auto mx-24 shadow-2xl shadow-gray-400 p-4">
