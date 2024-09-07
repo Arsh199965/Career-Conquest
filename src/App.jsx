@@ -5,7 +5,7 @@ import DashboardPage from './components/DashboardPage';
 import Profile from './components/Profile';
 import Home from "./components/HomePage";
 import SignUpForm from './components/SignUpForm';
-
+import TestPage from './components/TestPage'
 function App() {
   return (
     <Router>
@@ -13,7 +13,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/signup" element={<SignUpForm/>} />
+        <Route path="/signup" element={<SignUpForm />} />
+        <Route path="/tests" element={<TestPage/>} />
       </Routes>
     </Router>
   );

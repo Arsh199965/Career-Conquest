@@ -1,4 +1,5 @@
 import React from "react";
+import Sidebar from "./Sidebar";
 
 const DashboardPage = () => {
   return (
@@ -12,34 +13,7 @@ const DashboardPage = () => {
 
       <div className="flex flex-grow">
         {/* Sidebar */}
-        <aside className="w-52 bg-gray-100 shadow-xl shadow-gray-300 border h-auto p-6">
-          <ul className="space-y-6">
-            <li><a href="/dashboard" className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Dashboard
-            </a></li>
-            <li><a href="/profile" className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Profile
-            </a></li>
-            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Community
-            </a></li>
-            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Courses
-            </a></li>
-            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Tests
-            </a></li>
-            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Interviews
-            </a></li>
-            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Settings
-            </a></li>
-            <li><a href="/" className="hover:bg-gray-200 p-2 rounded-md cursor-pointer text-red-500">
-              Log Out
-            </a></li>
-          </ul>
-        </aside>
+        <Sidebar/>
 
         {/* Main Content */}
         <div className="border-2 border-gray-800 flex-auto mx-24 shadow-2xl shadow-gray-400 p-4">
