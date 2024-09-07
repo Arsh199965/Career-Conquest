@@ -4,8 +4,9 @@ import LoginPage from "./components/LoginPage";
 import DashboardPage from "./components/DashboardPage";
 import Profile from "./components/Profile";
 import Home from "./components/HomePage";
-import SignUpForm from "./components/SignupForm";
 import CoursesPage from "./components/CoursesPage";
+import SignUpForm from "./components/SignUpForm";
+import TestPage from "./components/TestPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/signup" element={<SignUpForm />} />
         <Route path="/courses" element={<CoursesPage />} />
+        <Route path="/tests" element={<TestPage />} />
       </Routes>
     </Router>
   );
