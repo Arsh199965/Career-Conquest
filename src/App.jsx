@@ -4,7 +4,7 @@ import LoginPage from './components/LoginPage';
 import DashboardPage from './components/DashboardPage';
 import Profile from './components/Profile';
 import Home from "./components/HomePage";
-import SignUpForm from './components/SignupForm';
+import SignUpForm from './components/SignUpForm';
 
 function App() {
   return (
