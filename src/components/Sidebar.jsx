@@ -8,12 +8,12 @@ const navLinks = [
   { name: "Assessments", link: "/assessments" },
   { name: "Interviews", link: "/interviews" },
   { name: "Settings", link: "/settings" },
-  { name: "Logout", link: "/" },
+  { name: "Log Out", link: "/" },
 ];
 
 const Sidebar = () => {
   return (
-    <aside className="w-52 bg-gray-100 shadow-xl shadow-gray-300 border h-auto p-6">
+    <aside className="w-52 min-w-[13rem] sm:w-64 lg:w-52 bg-gray-100 shadow-xl shadow-gray-300 border h-auto p-6">
       <ul className="space-y-6">
         {navLinks.map((link, index) => (
           <li key={index}>

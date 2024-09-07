@@ -27,7 +27,7 @@ const AssessmentSelectionPage = () => {
         <Sidebar />
 
         {/* Main Content */}
-        <div className="flex-auto mx-24 p-4">
+        <div className="flex-auto mx-20 p-4">
           {/* Unassessed Skills */}
           <div className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Unassessed Skills</h2>
