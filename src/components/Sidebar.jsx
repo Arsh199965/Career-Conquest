@@ -14,7 +14,7 @@ function Sidebar() {
             <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
               Courses
             </a></li>
-            <li><a href="/tests" className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
+            <li><a href="/assessments" className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
               Assessments
             </a></li>
             <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">

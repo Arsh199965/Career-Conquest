@@ -6,6 +6,7 @@ import Profile from './components/Profile';
 import Home from "./components/HomePage";
 import SignUpForm from './components/SignUpForm';
 import TestPage from './components/TestPage'
+import AssessmentSelectionPage from "./components/AssessmentSelection";
 function App() {
   return (
     <Router>
@@ -14,7 +15,8 @@ function App() {
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/signup" element={<SignUpForm />} />
-        <Route path="/tests" element={<TestPage/>} />
+        <Route path="/quiz" element={<TestPage />} />
+        <Route path="/assessments" element={<AssessmentSelectionPage/>} />
       </Routes>
     </Router>
   );
