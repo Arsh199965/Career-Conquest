@@ -1,6 +1,14 @@
 import React from "react";
+import Profile from "./Profile";
+import { useNavigate } from "react-router-dom";
 
 const DashboardPage = () => {
+
+  const navigate = useNavigate();
+
+  const handleProfileClick = () => {
+    navigate('/Profile');
+  };
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Header */}
@@ -15,7 +23,7 @@ const DashboardPage = () => {
             <li className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
               Home
             </li>
-            <li className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
+            <li onClick={handleProfileClick} className="hover:bg-gray-200 p-2 rounded-md cursor-pointer" >
               Profile
             </li>
             <li className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
