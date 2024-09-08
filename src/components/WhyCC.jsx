@@ -4,12 +4,12 @@ import Signup from '../assets/Signup.svg'; // Update path as needed
 const WhyCC = () => {
   return (
     <section className="bg-white py-8 my-12">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-12 lg:px-32">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-12 lg:px-32 mb-12">
         
         {/* Left Text Section */}
-        <div className="w-full lg:w-1/2 lg:pr-10 lg:pl-24">
-          <h2 className="text-3xl font-bold mb-4 pl-4">Why Career Conquest?</h2>
-          <ul className="list-none space-y-4 text-lg text-gray-700">
+        <div className="w-1/2 lg:pr-4 lg:pl-32">
+          <h2 className="text-3xl font-bold mb-6 pl-4">Why Career Conquest?</h2>
+          <ul className="list-none space-y-6 text-lg text-gray-700">
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span> Match with Top Jobs tailored to your skills and aspirations
             </li>
@@ -26,7 +26,7 @@ const WhyCC = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="w-1/2 lg:pl-10">
+        <div className="w-1/2 items-center h-auto">
           <img
             src={Signup}
             alt="Career Conquest Features"
@@ -34,6 +34,7 @@ const WhyCC = () => {
           />
         </div>
       </div>
+      <div className="h-[2px] my-5 bg-gray-600 justify-center mx-96"></div>
     </section>
   );
 };

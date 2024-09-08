@@ -1,13 +1,12 @@
 import React from "react";
 import logo from "../assets/logotrp 2.png"; // Path to your Career Conquest logo
-import success from "../assets/Success.svg";
-import objectives from "../assets/Objectives.svg";
-import trainer from "../assets/Corporate-Trainer.svg";
 import { useNavigate } from "react-router-dom";
 import Testimonial from "./Testimonial";
 import AnimatedSection from "./PathSection";
 import WhyCC from "./WhyCC";
 import Footer from "./Footer";
+import ExpertiseSection from "./Expertise";
+import Main from "../assets/Main.svg";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -45,7 +44,7 @@ const Home = () => {
         </div>
       </header>
 
-      <section className="container mx-auto flex flex-col lg:flex-row justify-between items-center py-16 pt-20 pb-4 pl-20 pr-20 mb-16">
+      <section className="container mx-auto flex flex-col lg:flex-row justify-between items-center py-16 pt-16 pb-4 pl-20 pr-20 mb-16">
         <div className="w-full lg:w-1/2">
           <h1 className="text-5xl font-bold text-black mb-6">
             Empowering Careers with Personalized Job and Skill Matching
@@ -63,17 +62,16 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 mt-8 lg:mt-0 flex">
-          <img src={objectives} className="w-1/3" />
-          <img src={trainer} className="w-1/3" />
-          <img src={success} className="w-1/3" />
+        <div className="w-full lg:w-1/2 mt-8 lg:mt-0 flex items-center justify-center">
+          <img src={Main} className="w-3/4" />
         </div>
       </section>
       <Testimonial content="We are the match-makers, so you don't have to worry about getting discovered." sayerName="Team Career Conquest" />
 
       
       <AnimatedSection/>
-      <WhyCC/>
+      <WhyCC />
+      <ExpertiseSection/>
       <Footer/>
     </div>
   );
