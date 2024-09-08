@@ -1,43 +1,50 @@
 import React, { useState } from 'react';
 import profilePhoto from "../assets/blank-profile-md.jpg";
 import logo from "../assets/logotrp 2.png";
+import { Link } from "react-router-dom";
+import setting from "../assets/setting-removebg-preview.png";
+
+const navLinks = [
+  { name: "Dashboard", link: "/dashboard" },
+  { name: "Profile", link: "/profile" },
+  { name: "Community", link: "/community" },
+  { name: "Courses", link: "/courses" },
+  { name: "Assessments", link: "/assessments" },
+  { name: "Interviews", link: "/interviews" },
+  { name: "Settings", link: "/settings" },
+  { name: "Log Out", link: "/" },
+];
 
 const Profile = () => {
   return (
-    <div className="profile">
+    <div className="profile z-10">
       {/* side panel */}
       <img src={logo} className='h-12 translate-y-[9px]' alt="Career Conquest"/>
       <aside className="w-52 bg-gray-100 shadow-xl translate-y-[110px] shadow-gray-300 border h-screen p-6">
           <ul className="space-y-6">
-            <li><a href="/dashboard" className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Dashboard
-            </a></li>
-            <li><a href="/profile" className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Profile
-            </a></li>
-            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Community
-            </a></li>
-            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Courses
-            </a></li>
-            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Tests
-            </a></li>
-            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Interviews
-            </a></li>
-            <li><a className="hover:bg-gray-200 p-2 rounded-md cursor-pointer">
-              Settings
-            </a></li>
-            <li><a href="/" className="hover:bg-gray-200 p-2 rounded-md cursor-pointer text-red-500">
-              Log Out
-            </a></li>
+          {navLinks.map((link, index) => (
+          <li key={index}>
+            <Link
+              to={link.link}
+              className="hover:bg-gray-200 p-2 rounded-md cursor-pointer"
+            >
+              {link.name}
+            </Link>
+          </li>
+        ))}
           </ul>
         </aside>
 
-      <div className="absolute top-8 left-1/2 mb-2">
-        <img src={profilePhoto} className="border-7 rounded-full w-40 h-40 shadow-xl" alt="" />
+        <div className='absolute top-8 left-[345px] w-[830px] rounded-xl h-40 bg-blue-200 z-100'>
+           <p style={{ fontFamily: 'Sevillana, Arial, sans-serif', fontSize:40, paddingLeft:23}}>     There is no elevator to success, you<br />      have to take the stairs</p>
+        </div> 
+
+      <div>
+        <img src={setting} alt="edit" className='absolute w-[40px] top-9 right-[100px]'/>
+      </div>
+
+      <div className="absolute top-8 left-1/2 mb-2 z-10">
+        <img src={profilePhoto} className="border-7 rounded-full w-40 h-40 translate-x-[300px] shadow-xl" alt="" />
         
         {/* Username and Email Section */}
         <div className="flex flex-row mt-5 ml-[-290px] gap-8">
