@@ -20,7 +20,7 @@ const Profile = () => {
     <div className="profile z-10">
       {/* side panel */}
       <img src={logo} className='h-12 translate-y-[9px]' alt="Career Conquest"/>
-      <aside className="w-52 bg-gray-100 shadow-xl translate-y-[110px] shadow-gray-300 border h-screen p-6">
+      <aside className="w-52 bg-gray-100 shadow-xl translate-y-[80px] shadow-gray-300 border h-screen p-6">
           <ul className="space-y-6">
           {navLinks.map((link, index) => (
           <li key={index}>
@@ -36,7 +36,7 @@ const Profile = () => {
         </aside>
 
         <div className='absolute top-8 left-[345px] w-[830px] rounded-xl h-40 bg-blue-200 z-100'>
-           <p style={{ fontFamily: 'Sevillana, Arial, sans-serif', fontSize:40, paddingLeft:23}}>     There is no elevator to success, you<br />      have to take the stairs</p>
+           <p style={ {fontSize:35, paddingLeft:23}}>     There is no elevator to success, you<br />      have to take the stairs</p>
         </div> 
 
       <div>
