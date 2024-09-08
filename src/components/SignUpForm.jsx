@@ -20,7 +20,7 @@ const SignUpForm = ({setData}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
       console.log('Form Data Submitted:', formData);
-      navigate('/dashboard');
+      navigate('/profile');
       setData(formData);
   };
 

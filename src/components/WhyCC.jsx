@@ -11,16 +11,16 @@ const WhyCC = () => {
           <h2 className="text-3xl font-bold mb-6 pl-4">Why Career Conquest?</h2>
           <ul className="list-none space-y-6 text-lg text-gray-700">
             <li className="flex items-start">
-              <span className="text-green-500 mr-2">✓</span> Match with Top Jobs tailored to your skills and aspirations
+              <span className="text-green-500 mr-2">✓</span>Match with top jobs tailored to your skills and aspirations
             </li>
             <li className="flex items-start">
-              <span className="text-green-500 mr-2">✓</span> Analyze Your Strengths and Weaknesses through personalized assessments
+              <span className="text-green-500 mr-2">✓</span> Analyze your Strengths and weaknesses through personalized assessments
             </li>
             <li className="flex items-start">
-              <span className="text-green-500 mr-2">✓</span> Develop Essential Skills with targeted learning paths
+              <span className="text-green-500 mr-2">✓</span> Develop essential skills with targeted learning paths
             </li>
             <li className="flex items-start">
-              <span className="text-green-500 mr-2">✓</span> Track Your Progress and achieve your career goals
+              <span className="text-green-500 mr-2">✓</span> Track your progress and achieve your career goals
             </li>
           </ul>
         </div>

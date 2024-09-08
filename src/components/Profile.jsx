@@ -1,84 +1,167 @@
-import React, { useState } from 'react';
-import profilePhoto from "../assets/blank-profile-md.jpg";
-import logo from "../assets/logotrp 2.png";
-import { Link } from "react-router-dom";
-import setting from "../assets/setting-removebg-preview.png";
+import React from "react";
+import Sidebar from "./Sidebar"; // Assuming Sidebar is already imported
+import profilePic from "../assets/Face.jpeg"; // Replace with your actual image import
+import {
+  FaMapMarkerAlt,
+  FaBuilding,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaTwitter,
+  FaLinkedin,
+  FaInstagram,
+} from "react-icons/fa";
 
-const navLinks = [
-  { name: "Dashboard", link: "/dashboard" },
-  { name: "Profile", link: "/profile" },
-  { name: "Community", link: "/community" },
-  { name: "Courses", link: "/courses" },
-  { name: "Assessments", link: "/assessments" },
-  { name: "Interviews", link: "/interviews" },
-  { name: "Settings", link: "/settings" },
-  { name: "Log Out", link: "/" },
+// Data objects
+const userData = {
+  name: "Arsh Ahmad",
+  title: "Candidate",
+  location: "Delhi, India",
+
+  email: "navneetSaurav@bhavya.com",
+  phone: "+91 42078600",
+};
+
+const onTheWebLinks = [
+  { icon: <FaInstagram className="mr-1" />, label: "arsh_ahmad", href: "#" },
+  { icon: <FaTwitter className="mr-1" />, label: "ahamd_arsh", href: "#" },
+  { icon: <FaLinkedin className="mr-1" />, label: "arsh199965", href: "#" },
 ];
 
+const skills = [
+  "Web Dev",
+  "Python Programming",
+  "Java Programming",
+  "Graphic Design",
+  "Product Management",
+];
+
+const sectors = [
+  "Internet Services",
+  "Retail",
+  "Management",
+  "E-commerce",
+  "Product Development",
+  "Startup Advisor",
+];
+
+const countries = ["India", "Japan", "United Kingdom", "Germany"];
+
+const languages = ["English", "Hindi"];
+
+const attachments = [
+  { file: "resume.pdf" },
+  { file: "portfolio-presentation.ppt" },
+  { file: "department_showreel.mov" },
+];
+
+// Profile component
 const Profile = () => {
   return (
-    <div className="profile z-10">
-      {/* side panel */}
-      <img src={logo} className='h-12 translate-y-[9px]' alt="Career Conquest"/>
-      <aside className="w-52 bg-gray-100 shadow-xl translate-y-[80px] shadow-gray-300 border h-screen p-6">
-          <ul className="space-y-6">
-          {navLinks.map((link, index) => (
-          <li key={index}>
-            <Link
-              to={link.link}
-              className="hover:bg-gray-200 p-2 rounded-md cursor-pointer"
-            >
-              {link.name}
-            </Link>
-          </li>
-        ))}
-          </ul>
-        </aside>
-
-        <div className='absolute top-8 left-[345px] w-[830px] rounded-xl h-40 bg-blue-200 z-100'>
-           <p style={ {fontSize:35, paddingLeft:23}}>     There is no elevator to success, you<br />      have to take the stairs</p>
-        </div> 
-
-      <div>
-        <img src={setting} alt="edit" className='absolute w-[40px] top-9 right-[100px]'/>
-      </div>
-
-      <div className="absolute top-8 left-1/2 mb-2 z-10">
-        <img src={profilePhoto} className="border-7 rounded-full w-40 h-40 translate-x-[300px] shadow-xl" alt="" />
-        
-        {/* Username and Email Section */}
-        <div className="flex flex-row mt-5 ml-[-290px] gap-8">
-          <div className="flex space-between items-center mb-2">
-            <label htmlFor="username" className="text-lg w-40">Username</label>
-            <input type="text" id="username" className="bg-gray-200 shadow-xl p-2 rounded-md w-60 font-bold" readOnly placeholder="Username" />
-          </div>
-          <div className="flex justify-between items-center mb-2">
-            <label htmlFor="email" className="text-lg w-40">Email Address</label>
-            <input type="text" id="email" className="bg-gray-200 shadow-xl p-2 rounded-md w-60 font-bold" readOnly placeholder="user@gmail.com" />
-          </div>
-        </div>
-
-        {/* GitHub, LinkedIn, and Description below Username and Email */}
-        <div className="flex flex-col gap-4 mt-8 ml-[-290px] w-full pr-10">
-          <div>
-            <label htmlFor="GitHub" className="text-lg">Github</label>
-            <input type="text" id="GitHub" className="bg-gray-200 p-2 shadow-xl rounded-md w-[830px] font-bold" readOnly placeholder="https://github.com/your-username" />
-          </div>
-          <div>
-            <label htmlFor="linkedIn" className="text-lg">LinkedIn</label>
-            <input type="text" id="linkedIn" className="bg-gray-200 shadow-xl p-2 rounded-md w-[830px] font-bold" readOnly placeholder="https://www.linkedin.com/in/your-username" />
-          </div>
-          <div className='flex flex-col space-between gap-7'>
-            <label htmlFor="Skills" className="text-lg">Skills</label>
-            <div className='flex flex-row gap-[80px]'>
-              <input type="text" className='w-50 h-10 bg-gray-200 p-2 rounded-md font-bold shadow-xl' readOnly placeholder='Web Development'/>
-              <input type="text" className='w-50 h-10 bg-gray-200 p-2 rounded-md font-bold shadow-xl' readOnly placeholder='Android Development'/>
-              <input type="text" className='w-50 h-10 bg-gray-200 p-2 rounded-md font-bold shadow-xl' readOnly placeholder='Machine Learning'/>
+    <div className=" min-h-screen bg-gradient-to-r from-blue-50 to-purple-100">
+      <header className="pt-10 w-full h-32 items-center">
+        <h1 className="text-4xl tracking-[0.2em] font-bold text-center">
+          Profile
+        </h1>
+      </header>
+      <div className="flex flex-grow">
+        <Sidebar />
+        <div className="mx-24">
+          <div className="bg-white shadow-2xl p-6">
+            <div className="flex justify-between border-b pb-6 mb-6">
+              <div className="flex">
+                <img
+                  src={profilePic}
+                  alt="Profile"
+                  className="rounded-full w-28 h-28 object-cover"
+                />
+                <div className="ml-6">
+                  <h1 className="text-2xl font-bold">{userData.name}</h1>
+                  <p className="text-sm text-gray-500">{userData.title}</p>
+                  <div className="flex mt-2 text-gray-500">
+                    <p className="mr-4 flex items-center">
+                      <FaMapMarkerAlt className="mr-1" /> {userData.location}
+                    </p>
+                    <p className="mr-4 flex items-center">
+                      <FaBuilding className="mr-1" /> {userData.department}
+                    </p>
+                    <p className="flex items-center">
+                      <FaEnvelope className="mr-1" /> {userData.email}
+                    </p>
+                  </div>
+                  <p className="mt-2 text-gray-500 flex items-center">
+                    <FaPhoneAlt className="mr-1" /> {userData.phone}
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <button className="bg-orange-400 hover:bg-orange-500 text-white px-6 py-2 rounded-md">
+                  Add to Cardholder
+                </button>
+              </div>
             </div>
-            <div className='flex flex-row gap-[80px]'>
-              <input type="text" className='w-50 h-10 bg-gray-200 p-2 rounded-md font-bold shadow-xl' readOnly placeholder='Blockchain Development'/>
-              <input type="text" className='w-50 h-10 bg-gray-200 p-2 rounded-md font-bold shadow-xl' readOnly placeholder='Front-end Development'/>
-              <input type="text" className='w-50 h-10 bg-gray-200 p-2 rounded-md font-bold shadow-xl' readOnly placeholder='Backend Development'/>
+
+            {/* On the web */}
+            <Section title="On the web">
+              <div className="flex space-x-4 text-blue-500">
+                {onTheWebLinks.map((link, index) => (
+                  <a key={index} href={link.href} className="flex items-center">
+                    {link.icon} {link.label}
+                  </a>
+                ))}
+              </div>
+            </Section>
+
+            {/* About Section */}
+            <Section title="About">
+              <p className="text-gray-600 text-sm my-4">
+                I like flowers. I like cities. I like buildings. I like forests.
+                Do not cut trees.
+              </p>
+
+              {/* Attachments */}
+              <Section title="Attachments">
+                <ul className="text-blue-500 text-sm">
+                  {attachments.map((attachment, index) => (
+                    <li key={index} className="mb-2">
+                      <i className="fas fa-file-alt"></i> {attachment.file}
+                    </li>
+                  ))}
+                </ul>
+              </Section>
+            </Section>
+
+            {/* Skills and Expertise */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="lg:col-span-2">
+                <Section title="Skills">
+                  <SkillBadgeList
+                    items={skills}
+                    colorClass="bg-blue-100 text-blue-600"
+                  />
+                </Section>
+                <Section title="Sectors of Interest">
+                  <SkillBadgeList
+                    items={sectors}
+                    colorClass="bg-gray-100 text-gray-600"
+                  />
+                </Section>
+              </div>
+
+              {/* Countries and Languages */}
+              <div>
+                <Section title="Countries of Interest">
+                  <SkillBadgeList
+                    items={countries}
+                    colorClass="bg-purple-100 text-purple-600"
+                  />
+                </Section>
+                <Section title="Languages">
+                  <SkillBadgeList
+                    items={languages}
+                    colorClass="bg-pink-100 text-pink-600"
+                  />
+                </Section>
+              </div>
             </div>
           </div>
         </div>
@@ -86,5 +169,27 @@ const Profile = () => {
     </div>
   );
 };
+
+// Reusable section component
+const Section = ({ title, children }) => (
+  <div className="mb-6">
+    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+    {children}
+  </div>
+);
+
+// Reusable skill badge list component
+const SkillBadgeList = ({ items, colorClass }) => (
+  <div className="flex flex-wrap">
+    {items.map((item, index) => (
+      <span
+        key={index}
+        className={`${colorClass} px-3 py-1 rounded-full text-xs font-semibold mr-2 mb-2`}
+      >
+        {item}
+      </span>
+    ))}
+  </div>
+);
 
 export default Profile;

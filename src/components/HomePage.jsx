@@ -44,9 +44,9 @@ const Home = () => {
         </div>
       </header>
 
-      <section className="container mx-auto flex flex-col lg:flex-row justify-between items-center py-16 pt-16 pb-4 pl-20 pr-20 mb-16">
+      <section className="container mx-auto flex flex-col lg:flex-row justify-between items-center py-16 pt-8 pb-4 pl-20 pr-20 mb-4">
         <div className="w-full lg:w-1/2">
-          <h1 className="text-5xl font-bold text-black mb-6">
+          <h1 className="text-5xl font-bold text-transparent bg-gradient-to-r bg-clip-text from-custom-red to-pink-800 mb-4 pb-2">
             Empowering Careers with Personalized Job and Skill Matching
           </h1>
           <p className="text-lg text-gray-700 mb-6">
@@ -54,10 +54,10 @@ const Home = () => {
             Career.
           </p>
           <div className="flex gap-5 mt-8">
-            <button onClick={handleSignup} className="bg-black text-white py-2 px-4 rounded">
+            <button onClick={handleSignup} className="bg-gradient-to-r from-gray-700 to-black text-white py-2 px-4 rounded">
               Start As Candidate
             </button>
-            <button className="bg-black text-white py-2 px-4 rounded">
+            <button className="bg-gradient-to-r from-gray-700 to-black text-white py-2 px-4 rounded">
               Start As Employer
             </button>
           </div>

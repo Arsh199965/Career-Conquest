@@ -6,7 +6,7 @@ const navLinks = [
   { name: "Community", link: "/community" },
   { name: "Courses", link: "/courses" },
   { name: "Assessments", link: "/assessments" },
-  { name: "Interviews", link: "/interviews" },
+  { name: "Upcoming Events", link: "/interviews" },
   { name: "Settings", link: "/settings" },
   { name: "Log Out", link: "/" },
 ];

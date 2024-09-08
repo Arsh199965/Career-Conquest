@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar";
 
 const DashboardPage = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-gradient-to-r from-blue-50 to-purple-50">
       {/* Header */}
       <header className="pt-10 w-full h-32 items-center">
         <h1 className="text-4xl tracking-[0.2em] font-bold text-center">
@@ -16,7 +16,7 @@ const DashboardPage = () => {
         <Sidebar />
 
         {/* Main Content */}
-        <div className="border-2 border-gray-800 flex-auto mx-24 shadow-2xl shadow-gray-400 p-4">
+        <div className="bg-white border-2 border-gray-800 flex-auto mx-24 shadow-2xl shadow-gray-400 p-4">
           {/* Job Matches */}
           <h2 className="text-xl font-semibold mb-4 px-4">Job Matches</h2>
           <div className=" mb-8 border-2 border-gray-300 mx-4">
@@ -90,16 +90,16 @@ const DashboardPage = () => {
               </div>
             </div>
             <div className="grid grid-cols-1 grid-rows-2">
-              {/* Upcoming Interviews */}
+              {/* Upcoming Events */}
               <div>
                 <h2 className="text-xl font-semibold my-4">
-                  Upcoming Interviews
+                  Upcoming Events
                 </h2>
                 <div className="bg-white border-2 border-gray-300 border-collapse">
                   <table className="min-w-full border-collapse">
                     <thead>
                       <tr className="bg-custom-red">
-                        <th className="border py-2 px-4">Company</th>
+                        <th className="border py-2 px-4">Event</th>
                         <th className="border py-2 px-4">Location</th>
                         <th className="border py-2 px-4">Date/Time</th>
                       </tr>

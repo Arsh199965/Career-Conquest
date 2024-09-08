@@ -82,7 +82,7 @@ const TestPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-gradient-to-r from-blue-50 to-purple-50">
       {/* Header */}
       <header className="pt-10 w-full h-32 items-center">
         <h1 className="text-4xl tracking-[0.1em] font-bold text-center">
