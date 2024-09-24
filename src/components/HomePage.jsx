@@ -28,9 +28,9 @@ const Home = () => {
         <div className="flex justify-end items-center">
           <nav className="flex space-x-6 text-black">
             <ul className="flex space-x-6 pr-10">
-              <li className="border-2 border-black px-2">Why Us</li>
-              <li className="border-2 border-black px-2">About Us</li>
-              <li className="border-2 border-black px-2">Contact</li>
+              <li className="border-2 border-black px-2 cursor-pointer">Why Us</li>
+              <li className="border-2 border-black px-2 cursor-pointer">About Us</li>
+              <li className="border-2 border-black px-2 cursor-pointer">Contact</li>
             </ul>
           </nav>
           <button

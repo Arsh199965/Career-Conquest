@@ -13,7 +13,7 @@ const AnimatedSection = () => {
   });
 
   return (
-    <section className="bg-gray-100 py-12 my-12">
+    <section className="bg-gray-100 py-12 my-12 overflow-hidden">
       <div
         ref={ref}
         className={`transition-all duration-1000 transform ${
